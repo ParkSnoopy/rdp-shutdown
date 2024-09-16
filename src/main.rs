@@ -19,12 +19,16 @@ fn main() {
     println!();
     println!("ETA: {} seconds", time);
 
+    //println!("Cmt: {}", 
+    //    format!("RDP Shutdown at `{:02}:{:02}:{:02}`", HRS, MIN, SEC)
+    //);
+
     Command::new("shutdown")
         .arg("/s")
         .arg("/t")
         .arg(format!("{}", time).as_str())
         .arg("/c")
-        .arg(format!("RDP Shutdown at `{}:{}:{}`", HRS, MIN, SEC))
+        .arg(format!("RDP Shutdown at `{:02}:{:02}:{:02}`", HRS, MIN, SEC))
         .spawn()
         .unwrap();
 }
