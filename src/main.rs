@@ -2,8 +2,9 @@ use chrono::{ Local, NaiveTime };
 use std::process::{ Command };
 
 const HRS: u32 = 12+9;
-const MIN: u32 = 0;
+const MIN: u32 = 30;
 const SEC: u32 = 0;
+
 
 
 fn main() {
